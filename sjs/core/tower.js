@@ -1,4 +1,4 @@
-(function( window, document, $ ){
+(function( window, document ){
 	"use strict";
 
 	function Tower ( array, wrap ) {
@@ -10,8 +10,8 @@
 
 	p.eq = function () {
 
-	}
+	};
 
-})(window, document, jQuery);
+})(window, document);
 
 
