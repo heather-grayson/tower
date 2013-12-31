@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 		watch: {
 			scripts: {
 				files: ['<%= jshint.files %>'],
-				tasks: ['jshint', 'qunit', 'snockets'],
+				tasks: ['snockets'],
 				options: {
 					debounceDelay: 250,
 					livereload: true,
