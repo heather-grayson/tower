@@ -94,8 +94,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-beep');
 
 	// Default task(s).
-	grunt.registerTask('test', [ 'jshint', 'jsonlint', 'qunit', 'beep:error' ]);
-	grunt.registerTask('default', ['jshint', 'jsonlint', 'qunit', 'compass:dist', 'snockets', 'beep:error']);
-	grunt.registerTask('travis', ['jshint', 'jsonlint','qunit']);
+	grunt.registerTask('test', [  'qunit', 'beep:error' ]);
+	grunt.registerTask('default', [ 'qunit', 'compass:dist', 'snockets', 'beep:error']);
+	grunt.registerTask('travis', [ 'qunit']);
 
 };
