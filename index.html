@@ -10,6 +10,17 @@
 		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
 		<script type="text/javascript" src="js/head.js"></script>
 	</head>
+
 	<body>
+	<h1>Tower</h1>
+	<div id="inputWrapper">
+		<h2>You can pick the size of the grid</h2>
+		columns: <input type="number" id="columns" value="1" min="1" max="10">
+		rows: <input type="number" id="rows" value="1" min="1" max="10">
+		<input id="arraySubmit" type="submit">
+	</div>
+	<div id="gridWrapper">
+		<ul class="towerGrid"></ul>
+	</div>
 	</body>
 </html>
