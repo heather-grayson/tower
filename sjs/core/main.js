@@ -14,8 +14,8 @@ $(function () {
 
 	$('#arraySubmit').click(function(){
 		towerArray = [];
-		wrapNum = $('#columns').val();
-		arraySize = $('#rows').val() * wrapNum;
+		wrapNum = parseInt($('#columns').val(), 10);
+		arraySize = parseInt($('#rows').val() * wrapNum, 10);
 
 		$('.box').hide();
 		$('.towerGrid').empty();
@@ -129,24 +129,27 @@ function buildingTower(index, item){
 	$('.towerGrid').empty();
 	towerArray.splice(index,1,item);
 	t = new Tower(towerArray, wrapNum);
-
+	
+	console.log(towerArray, wrapNum);
+	
 	for(var i = 0; i < arraySize; i++){
 		$('.towerGrid').append("<li>" + towerArray[i] + "</li>");
 	}
 
+	$('ul.towerGrid li').unbind().bind('click', showOptions);
+	$('ul.box li').unbind().bind('click', hideOptions);
+
 	console.log (t.isStable());
-	console.log(towerArray);
+	
 
 	stabilityCheck(index, item);
 }
 
-function stabilityCheck(index, item){
+function stabilityCheck(index){
 	if(!t.isStable()){
 		var blankItem = " ";
 		alert('Your tower is NOT stable. Please try again.');
-		buildingTower(currIndex, blankItem);
-		$('ul.towerGrid li').unbind().bind('click', showOptions);
-		$('ul.box li').unbind().bind('click', hideOptions);
+		buildingTower(index, blankItem);
 	}else{
 		console.log('it is stable')
 	}

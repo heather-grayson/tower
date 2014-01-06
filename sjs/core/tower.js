@@ -149,7 +149,6 @@
 					if ( (this.getRow(bottom_left, this.wrap) == (this.getRow(i, this.wrap) + 1)) && (this.getRow(bottom_right, this.wrap) == (this.getRow(i, this.wrap) + 1) ) ) {
 						if ( (this.array.length > bottom_left) && (this.array.length > bottom_right) ) {
 							if ( (this.array[bottom_left] !== "/") || (this.array[bottom_right] !== "\\") ) {
-								console.log ('moo');
 								blStable = false;
 								brStable = false;
 							}
